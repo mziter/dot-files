@@ -11,4 +11,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 [ -f ~/.fzf.colors ] && source ~/.fzf.colors
+
+# Setup alias to use `config` instead of `git` to deal with configuration repo
 alias config='/usr/bin/git --git-dir=/home/matt/.cfg/ --work-tree=/home/matt
