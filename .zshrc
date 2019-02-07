@@ -1,3 +1,28 @@
+###########################################################
+# ANTIGEN
+###########################################################
+source $HOME/scripts/antigen.zsh
+
+# Load the oh-my-zsh's library
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle command-not-found
+antigen bundle cargo
+antigen bundle kennethreitz/autoenv
+
+# Syntax highlighting module
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Load the theme
+antigen theme material-darker
+
+# Apply at end
+antigen apply
+###########################################################
+# AUTO NEW USER SETTINGS
+###########################################################
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -12,5 +37,17 @@ compinit
 # End of lines added by compinstall
 [ -f ~/.fzf.colors ] && source ~/.fzf.colors
 
+###################################
+# ALIASES
+###################################
 # Setup alias to use `config` instead of `git` to deal with configuration repo
-alias config='/usr/bin/git --git-dir=/home/matt/.cfg/ --work-tree=/home/matt
+alias config='/usr/bin/git --git-dir=/home/matt/.cfg/ --work-tree=/home/matt'
+
+# Use exa instead of ls
+alias ls=exa
+# Use bat instead of cat
+alias cat=bat
+# use fd instead of find
+alias find=fd
+# use ripgrep instead of grep
+alias grep=rg
