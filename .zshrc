@@ -14,9 +14,6 @@ antigen bundle kennethreitz/autoenv
 # Syntax highlighting module
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Load the theme
-antigen theme material-darker
-
 # Apply at end
 antigen apply
 ###########################################################
@@ -38,6 +35,14 @@ compinit
 [ -f ~/.fzf.colors ] && source ~/.fzf.colors
 
 ###################################
+# BASE16
+###################################
+BASE16_SHELL="$HOME/.base16-manager/chriskempson/base16-shell"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+###################################
 # ALIASES
 ###################################
 # Setup alias to use `config` instead of `git` to deal with configuration repo
@@ -51,3 +56,7 @@ alias cat=bat
 alias find=fd
 # use ripgrep instead of grep
 alias grep=rg
+
+###################################
+# CARGO
+source $HOME/.cargo/env
