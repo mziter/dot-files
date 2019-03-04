@@ -58,6 +58,10 @@ let g:secure_modelines_allowed_items = [
                 \ "colorcolumn"
                 \ ]
 
+" RUST
+" Format on save
+let g:rustfmt_autosave = 1
+
 " AIRLINE
 let g:airline_theme = 'base16'
 let g:airline#extensions#branch#enabled = 1
@@ -70,7 +74,7 @@ let g:airline_powerline_fonts = 1
 let g:ale_sign_column_always = 1
 " only lint on save
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_save = 0
+let g:ale_lint_on_save = 1
 let g:ale_lint_on_enter = 0
 let g:ale_rust_cargo_use_check = 1
 let g:ale_rust_cargo_check_all_targets = 1

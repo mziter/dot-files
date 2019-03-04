@@ -11,6 +11,10 @@
 
 set $mod Mod1
 
+# GAPS?
+#gaps inner 10 
+#gaps outer 5
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
@@ -166,4 +170,5 @@ bindsym $mod+r mode "resize"
 ## CUSTOM CONFIG
 new_window none
 
+exec_always --no-startup-id compton
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

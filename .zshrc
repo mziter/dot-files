@@ -42,21 +42,10 @@ BASE16_SHELL="$HOME/.base16-manager/chriskempson/base16-shell"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-###################################
-# ALIASES
-###################################
-# Setup alias to use `config` instead of `git` to deal with configuration repo
-alias config='/usr/bin/git --git-dir=/home/matt/.cfg/ --work-tree=/home/matt'
-
-# Use exa instead of ls
-alias ls=exa
-# Use bat instead of cat
-alias cat=bat
-# use fd instead of find
-alias find=fd
-# use ripgrep instead of grep
-alias grep=rg
-
-###################################
 # CARGO
 source $HOME/.cargo/env
+
+# LOAD ALIASES 
+if [ -f ~/.aliases.sh ]; then
+    . ~/.aliases.sh
+fi
